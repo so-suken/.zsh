@@ -1,14 +1,43 @@
 # zshrc
-export PATH="/usr/local/anaconda/bin:/opt/local/libexec/gnubin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/local/lib:/usr/sbin:$HOME/.cargo/bin:$PATH"
-export GREP_OPTIONS='--color=auto'
-setopt no_global_rcs
-export FZF_DEFAULT_OPTS='--preview "bat --color=always --style=header,grid --line-range :100 {}"'
-export BUCHI='94:f6:d6:12:82:56'
 
-export ZDOTDIR="$HOME/.zsh"
+clone this file on your home directory.
 
-#setopt
-setopt IGNORE_EOF NO_CLOBBER CORRECT SHARE_HISTORY HIST_IGNORE_ALL_DUPS HIST_REDUCE_BLANKS HIST_NO_STORE HIST_IGNORE_SPACE LIST_PACKED LIST_ROWS_FIRST AUTO_CD EXTENDED_GLOB SHORT_LOOPS CDABLE_VARS AUTO_PUSHD PUSHD_IGNORE_DUPS INTERACTIVE_COMMENTS NUMERIC_GLOB_SORT MENU_COMPLETE
+pease move ".zplug" file to your home directory by this command (zplug file doesn't work if the file is not in home directory)
 
-# autoload histry-search-end
-#export CXX="/opt/local/bin/g++-5"
+```zsh
+cd ~/.zsh
+mv .zplug ..
+```
+
+## installation
+In my zshrc, I use tools installed from outside.
+
+### exa
+github:
+https://github.com/ogham/exa
+
+this is the superior command than "ls command".
+
+### bat
+github:
+https://github.com/sharkdp/bat
+
+this is the superior command than "cat command"
+
+### procs
+github:
+https://github.com/dalance/procs
+
+this is the superior command than "ps command"
+
+### neovim
+github:
+https://github.com/neovim/neovim
+
+Vim-fork focused on extensibility and usability
+
+### lazygit
+github:
+https://github.com/jesseduffield/lazygit
+
+Easy way to use git
