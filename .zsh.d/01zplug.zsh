@@ -1,4 +1,4 @@
-source ~/.zsh/.zplug/init.zsh 
+source ~/.zplug/init.zsh 
 
 #高速化
 #zplug 'zsh-users/zsh-completions', use:'src/_*', lazy:true

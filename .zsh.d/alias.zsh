@@ -41,6 +41,7 @@ a myip="curl http://ipecho.net/plain; echo"
 a getids="sudo arp-scan -I en0 -l"
 a lg="lazygit"
 a endif="fi"
+a kth='open -a /Applications/Google\ Chrome.app "https://www.service4mobility.com/europe/LoginServlet?sprache=en&identifier=STOCKHO04&ben_login=Sohta3"'
 
 #global alias
 a -g pc='| pbcopy'
