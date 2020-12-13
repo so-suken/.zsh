@@ -23,7 +23,7 @@ a claer='clear'
 a matlab="/Applications/MATLAB_R2018b.app/bin/matlab -nodesktop -nosplash -nodisplay -r"
 a BiXGBoost="caffeinate -i python bixgboost_script.py && python notify.py 1 || python notify.py" #BiXGBoost用のalias
 a gnw="java -jar ~/Downloads/gnw/gnw-3.1.2b.jar -c settings.txt"
-a grep="grep -rin"
+a grep="grep -rin --color=auto"
 a mkdir="mkdir -pv"
 a sl="sl -e"
 a cmat="cmatrix -s"

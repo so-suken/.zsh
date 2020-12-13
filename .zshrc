@@ -96,11 +96,8 @@ WATCHFMT="%(a:Hello %n [%m] [%t]:Bye %n [%m] [%t])"
 setopt AUTO_RESUME
 
 # pyenv + pyenv-virtualenv 設定
-# export PYENV_ROOT=$HOME/.pyenv
-# export PATH=$PYENV_ROOT/bin:$PATH
-# export PATH="$PATH:/Users/makino/.local/bin"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # history-search-end
 autoload history-search-end
@@ -144,4 +141,7 @@ elatexmk() {
 #  [ -z "$ENHANCD_ROOT" ] && function chpwd { l } # enhancdがない場合
 #  [ -z "$ENHANCD_ROOT" ] || export ENHANCD_HOOK_AFTER_CD="lt" # enhancdがあるときはそのHook機構を使う
 #}
+
+
+test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh" || true
 
