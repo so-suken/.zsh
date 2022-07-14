@@ -1511,8 +1511,8 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _icat _git-hub-browse _git-hub-shorten-url _git-info _git-submodule-move \
-            _git-submodule-remove _gomi _zplug _SUSEconfig _a2ps \
+autoload -Uz _icat _gomi _git-hub-browse _git-hub-shorten-url _git-info \
+            _git-submodule-move _git-submodule-remove _zplug _SUSEconfig _a2ps \
             _a2utils _aap _absolute_command_paths _acpi _acpitool \
             _acroread _adb _add-zle-hook-widget _add-zsh-hook _alias \
             _aliases _all_labels _all_matches _alternative _analyseplugin \

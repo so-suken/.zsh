@@ -42,6 +42,9 @@ a getids="sudo arp-scan -I en0 -l"
 a lg="lazygit"
 a endif="fi"
 a kth='open -a /Applications/Google\ Chrome.app "https://www.service4mobility.com/europe/LoginServlet?sprache=en&identifier=STOCKHO04&ben_login=Sohta3"'
+a ad='terminal-share -service airdrop -video'
+a bash='exec env -i  bash --norc --noprofile'
+a notebook='jupyter notebook'
 
 #global alias
 a -g pc='| pbcopy'
@@ -50,3 +53,4 @@ a -g pc='| pbcopy'
 a -s pdf='open'
 a -s py='python'
 a -s {gif,jpg,jpeg,png,bmp}='display'
+

@@ -66,7 +66,7 @@ setopt complete_in_word      # 語の途中でもカーソル位置で補完
 setopt always_last_prompt    # カーソル位置は保持したままファイル名一覧を順次その場で表示
   
 #cdpathの指定
-cdpath=(~ / /Users/makino/Research/Project_SparceGRNInference)
+cdpath=(~ / ~/Research/Project_SparceGRNInference)
 
 #補完の候補絞り(オブジェクトファイルとバックアップファイルの除外)
 fignore=(.o \~)
@@ -145,3 +145,5 @@ elatexmk() {
 
 test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh" || true
 
+export JAVA_HOME=`/usr/libexec/java_home -v 17.0.2, x86_64`
+PATH=$JAVA_HOME/bin:$PATH
