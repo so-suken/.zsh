@@ -9,6 +9,8 @@
 # Browser
 #
 
+echo "loading zprofile"
+
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
@@ -64,6 +66,14 @@ fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
+#pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+#export PATH=$PYENV_ROOT/bin:/opt/local/libexec/gnubin:/opt/local/bin:/usr/local/bin:/opt/local/sbin:/usr/local/lib:$PATH
+export PATH="$PYENV_ROOT/bin:$PATH"
+#export PATH="$PATH:/Users/makino/.local/bin"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
+export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
 
 #文字の色をピンク色に
 #PS1='%F{13}Mac%Sino%s%f%F{10}[%(5~,%-1~/.../%2~,%~)]%f %F{231}%#%f '
@@ -75,3 +85,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Added by Toolbox App
 export PATH="$PATH:/Users/makino/Library/Application Support/JetBrains/Toolbox/scripts"
+echo "PATH AFTER ZPROFILE"
+echo $PATH

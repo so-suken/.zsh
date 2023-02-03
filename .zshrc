@@ -2,9 +2,15 @@
 #zshの読み込みファイル
 ZSHHOME="${HOME}/.zsh/.zsh.d"
 
+echo "BEFORE"
+echo $PATH
+
+
 if [ -d $ZSHHOME -a -r $ZSHHOME -a \
      -x $ZSHHOME ]; then
     for i in $ZSHHOME/*; do
+      echo "loaded"
+      echo $i
         [[ ${i##*/} = *.zsh ]] &&
             [ \( -f $i -o -h $i \) -a -r $i ] && . $i
     done
@@ -52,11 +58,11 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 #ファイルに色を付ける(補完)
- eval `dircolors`
-  zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+eval `dircolors`
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
   #補完候補のハイライト
-  zstyle ':completion:*:default' menu select=2
+zstyle ':completion:*:default' menu select=2
 
   # セパレータを設定する
 zstyle ':completion:*' list-separator '-->'
@@ -66,7 +72,7 @@ setopt complete_in_word      # 語の途中でもカーソル位置で補完
 setopt always_last_prompt    # カーソル位置は保持したままファイル名一覧を順次その場で表示
   
 #cdpathの指定
-cdpath=(~ / ~/Research/Project_SparceGRNInference)
+cdpath=(~ /)
 
 #補完の候補絞り(オブジェクトファイルとバックアップファイルの除外)
 fignore=(.o \~)
@@ -96,9 +102,12 @@ WATCHFMT="%(a:Hello %n [%m] [%t]:Bye %n [%m] [%t])"
 setopt AUTO_RESUME
 
 # pyenv + pyenv-virtualenv 設定
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#if command -v pyenv >/dev/null; then eval "$(pyenv init -)"; fi 
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
+echo "AFTER"
+echo $PATH
 # history-search-end
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end

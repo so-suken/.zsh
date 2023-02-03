@@ -1,5 +1,4 @@
 source ~/.zsh/.zplug/init.zsh 
-
 #高速化
 #zplug 'zsh-users/zsh-completions', use:'src/_*', lazy:true
 
@@ -61,6 +60,7 @@ zplug "junegunn/fzf-bin", \
 
 # prezto のプラグインやテーマを使用する
 #zplug "modules/osx", from:prezto, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "modules/git", from:prezto
 zplug "modules/prompt", from:prezto
 # zstyle は zplug load の前に設定する
 zstyle ':prezto:module:prompt' theme 'sorin'
