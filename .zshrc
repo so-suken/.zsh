@@ -1,4 +1,3 @@
-
 #zshの読み込みファイル
 ZSHHOME="${HOME}/.zsh/.zsh.d"
 
@@ -102,6 +101,9 @@ WATCHFMT="%(a:Hello %n [%m] [%t]:Bye %n [%m] [%t])"
 setopt AUTO_RESUME
 
 # pyenv + pyenv-virtualenv 設定
+#export PYENV_ROOT="$HOME/.pyenv"
+#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
 #if command -v pyenv >/dev/null; then eval "$(pyenv init -)"; fi 
 #eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
