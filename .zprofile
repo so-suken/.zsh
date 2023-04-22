@@ -73,7 +73,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 #export PATH="$PATH:/Users/makino/.local/bin"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#eval "$(pyenv virtualenv-init -)"
 export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
 
 #文字の色をピンク色に
@@ -82,7 +82,9 @@ export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
 
 #ターミナルの右側に日付・時間表示
 #RPS1='%F{7}%@%f'
-
+#homebrew
+export PATH=$HOME/.homebrew/bin:$PATH
+export HOMEBREW_CACHE=$HOME/.homebrew/cache
 
 # Added by Toolbox App
 export PATH="$PATH:/Users/makino/Library/Application Support/JetBrains/Toolbox/scripts"

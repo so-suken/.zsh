@@ -1,4 +1,7 @@
-source ~/.zsh/.zplug/init.zsh 
+#source ~/.zsh/.zplug/init.zsh 
+export ZPLUG_HOME=$(brew --prefix)/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
 #高速化
 #zplug 'zsh-users/zsh-completions', use:'src/_*', lazy:true
 
@@ -42,11 +45,11 @@ zplug "k4rthik/git-cal", as:command, frozen:1
 
 # GitHub Releases からインストールする
 # また、コマンドは rename-to でリネームできる
-zplug "junegunn/fzf-bin", \
-    from:gh-r, \
-    as:command, \
-    rename-to:fzf, \
-    use:"*darwin*amd64*"
+#zplug "junegunn/fzf-bin", \
+#    from:gh-r, \
+#    as:command, \
+#    rename-to:fzf, \
+#    use:"*darwin*amd64*"
 
 #zplug "sorin-ionescu/prezto"
 #zplug "modules/command-not-found", from:prezto

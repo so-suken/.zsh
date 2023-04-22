@@ -1,14 +1,16 @@
 #zshの読み込みファイル
 ZSHHOME="${HOME}/.zsh/.zsh.d"
 
-echo "BEFORE"
-echo $PATH
+#echo "BEFORE"
+#echo $PATH
 
+#zshplog
+#export ZPLUG_HOME=~/.zsh/.zplug
 
 if [ -d $ZSHHOME -a -r $ZSHHOME -a \
      -x $ZSHHOME ]; then
     for i in $ZSHHOME/*; do
-      echo "loaded"
+      echo -n "loaded "
       echo $i
         [[ ${i##*/} = *.zsh ]] &&
             [ \( -f $i -o -h $i \) -a -r $i ] && . $i
@@ -57,7 +59,7 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 #ファイルに色を付ける(補完)
-eval `dircolors`
+#eval `dircolors`
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
   #補完候補のハイライト
@@ -120,13 +122,11 @@ bindkey "^N" history-beginning-search-forward-end
 # export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 # export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 
-#zshplog
-# export ZPLUG_HOME=~/.zplug
 
 #文字の色をピンク色に
 #PS1='%F{13}Mac%Sino%s%f%F{10}[%(5~,%-1~/.../%2~,%~)]%f %F{231}%#%f '
 #PS1=' %F{13}Mac%Sino%s%f %F{231}%#%f '
-PS1='%F{230}%# %f%F{003}>%f%F{124}<>%f%F{143}>>%f '
+PS1='%F{230}%# %f%F{003}>%f%F{4}<%f%F{20}>%f%F{143}>>%f '
 
 #ターミナルの右側に日付・時間表示
 #RPS1='%F{7}%@%f'
