@@ -1,6 +1,9 @@
 #zshの読み込みファイル
 ZSHHOME="${HOME}/.zsh/.zsh.d"
 
+#pyenv init
+eval "$(pyenv init -)"
+
 #echo "BEFORE"
 #echo $PATH
 
